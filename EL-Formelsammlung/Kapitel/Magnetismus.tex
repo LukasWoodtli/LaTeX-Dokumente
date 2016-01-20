@@ -1,0 +1,153 @@
+% Magnetismus.tex
+
+\section{Magnetismus}
+\label{sec:Magnetismus}
+
+\subsection{Die Durchflutung}
+\label{sec:DieDurchflutung}
+\begin{tabular}{l l l}
+	\begin{minipage}[l]{5cm}
+		\[
+		\Theta = N \cdot I
+		\]
+		\[
+		[\Theta] = A
+		\]	
+	\end{minipage}
+	&
+	\begin{minipage}[l]{5cm}
+		$N$: Anzahl Wicklungen \\
+		$I$: Stromstärke
+	\end{minipage}
+\end{tabular}
+
+\subsection{Die magn. Erregung (magn. Feldstärke)}
+\label{sec:DieMagnErregungMagnFeldstärke}
+\begin{tabular}{l l l}
+	\begin{minipage}[l]{5cm}
+		\[
+		\vec{H} = \frac{N\cdot I}{\vec{l}} = \frac{\Theta}{\vec{l}}
+		\]
+		\[
+		[\vec{H}] = \frac{A}{m}
+		\]
+	\end{minipage}
+	&
+	\begin{minipage}[l]{5cm}
+		$\Theta$: Durchflutung \\
+		$\vec{l}$: Länge der Feldlinie (Richtung: Rechte-Hand-Regel)
+	\end{minipage}
+\end{tabular}
+
+\subsection{Die magn. Spannung}
+\label{sec:DieMagnSpannung}
+\begin{tabular}{l l l}
+	\begin{minipage}[l]{5cm}
+		\[
+		V_m = \int \limits _S \vec{H} \ ds
+		\]	
+		\[
+		[V_m]= \frac{A}{m} \cdot m = A
+		\]
+	\end{minipage}
+\end{tabular}
+
+\subsection{Die magn. Flussdichte (magn. Induktion)}
+\label{sec:DieMagnFlussdichteMagnInduktion}
+\begin{tabular}{l l l}
+	\begin{minipage}[l]{5cm}
+		\[
+		\vec{B} = \frac{\vec{F}}{I \cdot \vec{l}} \quad \text{für} \vec{B} \bot \vec{l}
+		\]
+		\[
+		\vec{F} = I \cdot (\vec{l} \times \vec{B}) 
+		\]
+		\[
+		[\vec{B}] = \frac{N}{Am} = \frac{Vs}{m^2} = T \; \text{(Tesla)}
+		\]
+	\end{minipage}
+	&
+	\begin{minipage}[l]{5cm}
+		$\vec{B}$: magn. Flussdichte \\
+		$\vec{F}$: Lorenz-Kraft \\
+		$\vec{l}$: Länge des Leiters in Richtung von $I$
+	\end{minipage}
+\end{tabular}
+
+\subsection{Der magn. Fluss}
+\label{sec:DerMagnFluss}
+\begin{tabular}{l l l}
+	\begin{minipage}[l]{5cm}
+		\[
+		\Phi = \int \limits _A \vec{B} \ d\vec{A}
+		\]
+		\[
+		[\Phi] = Vs = Wb \; \text{(Weber)}
+		\]
+	\end{minipage}
+\end{tabular}
+
+\subsection{Die Permeabilität}
+\label{sec:DiePermeabilität}
+\begin{tabular}{l l l}
+	\begin{minipage}[l]{5cm}
+		\[
+		\vec{B} = \mu \cdot \vec{H}
+		\]
+		\[
+		\mu = \mu_0 \cdot \mu_r
+		\]	
+	\end{minipage}
+\end{tabular}
+\begin{itemize}
+	\item $\mu$ ist in Metallen nicht konstant (Magnetisierungskennlinie)
+\end{itemize}
+
+\subsection{Das Durchflutungsgesetz}
+\label{sec:DasDurchflutungsgesetz}
+\begin{tabular}{l l l}
+	\begin{minipage}[l]{5cm}
+		\[
+		\Theta = \oint \limits _{S} \vec{H} \ d\vec{s}
+		\]
+	\end{minipage}
+	\begin{minipage}[l]{5cm}
+		$\Theta$: gesammte umschlossene Durchflutung
+	\end{minipage}
+\end{tabular}
+
+\subsection{Der magn. Widerstand}
+\label{sec:DerMagnWiderstand}
+\begin{tabular}{l l l}
+	\begin{minipage}[l]{5cm}
+		\[
+		R_m = \frac{1}{\mu} \cdot \frac{l}{A}
+		\]
+		\[
+		\Lambda = \frac{1}{R_m}
+		\]
+		\[
+		[R_m] = \frac{A}{Vs}
+		\]
+	\end{minipage}
+\end{tabular}
+\begin{itemize}
+	\item Schaltungen mit magnetischen Widersänden sind analog zu elektrischen Widersänden zu berechnen.
+\end{itemize}
+
+
+\subsection{Das ohmsche Gesetz des magn. Kreises}
+\label{sec:DasOhmscheGesetzDesMagnKreises}
+\begin{tabular}{l l l}
+	\begin{minipage}[l]{5cm}
+		\[
+		\Phi = \frac{\Theta}{R_m}
+		\]
+	\end{minipage}
+	&
+	\begin{minipage}[l]{5cm}
+		\[
+		\text{analog: } I = \frac{U}{R}
+		\]
+	\end{minipage}
+\end{tabular}

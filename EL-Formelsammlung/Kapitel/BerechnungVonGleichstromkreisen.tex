@@ -9,24 +9,56 @@
 \subsubsection{Serieschaltung von Widerständen}
 \label{sec:SerieschaltungVonWiderständen}
 
-\[
-R=R_1+R_2+R_3+...
-\]
-\[
-R=\sum_{i=1}^nR_i
-\]
-
-\subsubsection{Parallelschaltung von Widerständen}
-\label{sec:ParallelschaltungVonWiderständen}
-\[
-\frac{1}{R}=\frac{1}{R_1}+\frac{1}{R_2}+\frac{1}{R_3}+...
-\]
-\[
-G=G_1+G_2+G_3+...
-\]
-\[
-G=\sum_{i=1}^nG_i
-\]
+\begin{tabular}{l l}
+	\begin{minipage}[l]{5cm}
+		\[
+		R=R_1+R_2+R_3+...
+		\]
+		\[
+		R=\sum R_k
+		\]
+		
+		\subsubsection{Parallelschaltung von Widerständen}
+		\label{sec:ParallelschaltungVonWiderständen}
+		\[
+		\frac{1}{R}=\frac{1}{R_1}+\frac{1}{R_2}+\frac{1}{R_3}+...
+		\]
+		\[
+		G=G_1+G_2+G_3+...
+		\]
+		\[
+		G=\sum G_k
+		\]
+	\end{minipage}
+%&
+%	\begin{figure}
+%			\psset{unit=1cm}
+%			\begin{pspicture}(6,3)
+%				\pnode(1.5,0.5){A}
+%				\pnode(1.5,2.5){B}
+%				\resistor[labeloffset=0](A)(B){$R_1$}
+%		
+%				\pnode(2.5,0.5){C}
+%				\pnode(2.5,2.5){D}
+%				\resistor[labeloffset=0](C)(D){$R_2$}
+%		
+%				\pnode(3.5,0.5){C}
+%				\pnode(3.5,2.5){D}
+%				\resistor[labeloffset=0](C)(D){$R_3$}
+%		
+%				\pnode(4.5,0.5){C}
+%				\pnode(4.5,2.5){D}
+%				\resistor[labeloffset=0](C)(D){$R_3$}
+%		
+%				\pnode(5,0.5){E}
+%				\pnode(5,2.5){F}		
+%				\psline(E)(A)
+%				\psline(F)(B)
+%		
+%				\rput(5.2,1.5){...}
+%			\end{pspicture}
+%	\end{figure}
+\end{tabular}	
 
 \subsubsection{Stromteiler-Regel}
 \label{sec:StromteilerRegel}
@@ -66,7 +98,6 @@ I \cdot R_{12} = I_1 \cdot R_1 = I_2 \cdot R_2
 
 \paragraph{Stern - Dreieck Umwandlung}
 \label{sec:SternDreieckUmwandlung}
-
 \[
 R_{12}=R_1 +R_2+\frac{R_1\cdot R_2}{R_3}
 \]

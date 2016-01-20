@@ -1,0 +1,219 @@
+% Induktion.tex
+\section{Induktion}
+\label{sec:Induktion}
+
+\subsection{Die induzierte Spannung}
+\label{sec:DieInduzierteSpannung}
+
+\begin{tabular}{l l}
+	\begin{minipage}[l]{5cm}
+		\[
+			U=\int \limits^2_1 \vec{E} \ d \vec{l}
+			=-\int \limits^2_1 (\vec{v} \times \vec{B}) \ d \vec{l}
+		\]
+		\[
+			U=B\cdot l\cdot v \quad \text{für} \; \vec{B} \bot \vec{v}
+		\]
+	\end{minipage}
+\end{tabular}
+
+\subsection{Das Induktionsgesetz}
+\label{sec:DasInduktionsgesetz}
+
+\begin{tabular}{l l l}
+	\begin{minipage}[l]{5cm}
+		\[
+		U=N\cdot \frac{d\Phi}{dt}
+		\]
+	\end{minipage}
+\end{tabular}
+
+\subsection{Lenz'sche Regel}
+\label{sec:LenzScheRegel}
+Die induzierte Spannung ist stets so gerichtet, dass ein durch sie hervorgerufener Strom der Ursache ihrer Entstehung entgegenwirkt.
+
+
+\subsection{Die Induktivität (Spule)}
+\label{sec:DieInduktivitätSpule}
+\begin{tabular}{l l l}
+	\begin{minipage}[l]{5cm}
+	\[
+		L= \frac{N^2}{\sum{R_m}}
+	\]
+	\[
+		[L]= \frac{Vs}{A}=H
+	\]
+	\[
+		U_L = L \cdot \frac{di(t)}{dt}
+	\]
+\end{minipage}
+\end{tabular}
+
+Der Strom durch die Induktivität kann nicht springen.
+
+\subsection{Die differentielle Permeabilität}
+\label{sec:DieDifferentiellePermeabilität}
+
+\begin{tabular}{l l l}
+	\begin{minipage}[l]{5cm}
+		\[
+			\mu_{dif} = \frac{dB}{dH}
+		\]
+		\[
+			L=N^2 \cdot \mu_{dif}\cdot \frac{A}{l}
+	\]
+	\end{minipage}
+	&
+	\begin{minipage}[l]{5cm}
+		$\mu_{dif}$: Differentielle Permeabilität (Steigung der Hysteresekurve)
+	\end{minipage}
+\end{tabular}
+
+\begin{itemize}
+		\item Bei gegebener Geometrie variiert L ausschliesslich mit der Steigung der Hysteresekurve. Bei kleinen H-Werten werden wir einsehr grosses L erhalten. Im Sättigungsbereich kann L um mehrere zehnerpotenzen zusammenfallen.
+	
+	\item Die Formel $L=N^2 \cdot \mu_{dif}\cdot \frac{A}{l}$ gilt nur für magnetische Kreise aus \emph{einem} Material.
+	
+	\item Es ist ersichtlich, dass die Induktivität einer gegebene Spule mit ferromagnetischem Kern um ein Vielfaches grösser ist, als die selbe Spule ohne Kern.
+
+\end{itemize}
+
+\subsection{Grundschaltungen mit Iduktivitäten}
+\label{sec:GrundschaltungenMitIduktivitäten}
+
+\subsubsection{Serieschaltung:}
+\label{sec:Serieschaltung}
+
+\begin{tabular}{l l l}
+	\begin{minipage}[l]{5cm}
+		\[
+			L_{Tot} = \sum{L_i}
+		\]
+	\end{minipage}
+\end{tabular}
+
+\subsubsection{Parallelschaltung}
+\label{sec:Parallelschaltung}
+\begin{tabular}{l l l}
+	\begin{minipage}[l]{5cm}
+		\[
+			\frac{1}{L_{Tot}} = \sum{\frac{1}{L_i}}
+		\]
+	\end{minipage}
+\end{tabular}
+
+\begin{itemize}
+	\item 
+		Bei Schaltungen mit Induktivitäten wird vorausgestzt, dass sich die Magnetischen Felder der einzelnen Spulen nicht beeinflussen.
+	\item
+		Die Formel für die Parallelschaltung gilt nur für ideale Induktivitäten, also solche ohne Innenwiderstand und ohne parasitäre Kapazitäten. Bei hohen Frequenzen darf nicht so gerechnet werden.
+		\item
+			Das zusammenschalten von Induktivitäten hat in der Praxis fast keine Bedeutung, da Spulen meisst "`massgefertigt"' werden.
+\end{itemize}
+
+\section{Gegeninduktivität}
+\label{sec:Gegeninduktivität}
+
+\subsection{Gegeniduktion}
+\label{sec:Gegeniduktion}
+
+\begin{tabular}{l l l}
+	\begin{minipage}[l]{5cm}
+		\[
+		L_{ij} = L_{ji} = k \cdot \sqrt{L_i \cdot L_j}
+		\]	
+	\end{minipage}
+	&
+	\begin{minipage}[l]{5cm}
+		$L_n$: Induktivitäten	\\
+		$k$: Kopplungsfaktor
+	\end{minipage}
+\end{tabular}
+
+	
+\begin{itemize}
+	\item
+		Ist $k\approx 1$ spricht man von einer \emph{engen Kopplung} zweier Induktivitäten. Ist $k$ jedoch nahe bei 0, so nennt man das eine \emph{lose Kopplung}.
+		\item
+			Der Kopplungsfaktor ist nur von den elektromechanischen Eigenschaften abhängig. Er ist weder von der Leistung noch von der Frequenz abhängig (gilt nur für tiefe bis mittlere Frequenzen).
+			\item
+				Gegeninduktion ist eine einfache Form der drahtlosen Energieübertragung. Beispiele: Transformator (enge Kopplung), Signalübertragung, Antennen, Sender (lose Kopplung)
+			\item
+				Über diese Beziehung lassen sich auch "`unfreiwillig gekoppelte"' magnetische Kreise beschreiben.
+\end{itemize}
+
+\subsection{Transformator (ideal)}
+\label{sec:TransformatorIdeal}
+
+\begin{tabular}{l l l}
+	\begin{minipage}[l]{5cm}
+		\[
+			\frac{u_1}{u_2} = \frac{N_1}{N_2}
+		\]
+		\[
+			\frac{i_1}{i_2} = \frac{N_2}{N_1}
+		\]
+	\end{minipage}
+\end{tabular}
+
+\begin{itemize}
+	\item 
+		Es lassen sich nur Wechselgrössen übertragen.
+\end{itemize}
+
+\section{Energie und Kräfte im magnetischen Feld}
+\label{sec:EnergieUndKräfteImMagnetischenFeld}
+
+\subsection{Der Energieinhalt der Induktivität}
+\label{sec:DerEnergieinhaltDerInduktivität}
+\begin{tabular}{l l l}
+	\begin{minipage}[l]{5cm}
+		\[
+		W(i) = L \cdot \int \limits _{i_1}^{i_2} i\ di
+		\]
+		\[
+		W(i) = \frac{L}{2} \cdot I^2 \quad \text{für} \ i_1 = 0
+		\]
+	\end{minipage}
+\end{tabular}
+
+\subsection{Die Energiedichte}
+\label{sec:DieEnergiedichte}
+\begin{tabular}{l l l}
+	\begin{minipage}[l]{5cm}
+		\[
+		w = \int \limits _{B_1} ^{B_2} \vec{H} \ d\vec{B}
+		\]
+		\[
+		w = \frac{1}{\mu} \int \limits _{B_1} ^{B_2} \vec{B} \ d\vec{B}
+		\]
+		\[
+		[w]= \frac{J}{m^3}
+		\]
+	\end{minipage}
+	&
+	\begin{minipage}[l]{5cm}
+		$w$: Energiedichte ($w= \frac{dW}{dV}$)
+	\end{minipage}
+\end{tabular}
+\begin{itemize}
+	\item Bei \emph{nicht konstanter} Permeabilität muss man das Integral für die Energiedichte in der Regel graphisch lösen.
+\end{itemize}
+
+\subsection{Kräfte an Grenzflächen}
+\label{sec:KräfteAnGrenzflächen}
+\begin{tabular}{l l l}
+	\begin{minipage}[l]{5cm}
+		\[
+		F = \frac{B^2}{2\mu_0} \cdot A
+		\]
+		\[
+		F = \frac{\Phi^2}{2\mu_0 \cdot A}
+		\]
+	\end{minipage}
+	&
+	\begin{minipage}[l]{5cm}
+		$B$: magnetische Flussdichte im Luftspalt \\
+		$A$: Fläche des Luftspaltes
+	\end{minipage}
+\end{tabular}
