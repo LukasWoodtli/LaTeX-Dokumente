@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<txcop:outputProfiles version="1" xmlns:txcop="http://schemas.ToolsCenter.org/TeXnicCenter/OutputProfiles.xsd">
+	<outputProfileList>
+		<outputProfile name="LaTeX=&gt;pst-pdf=&gt;PDF" stopOnLatexError="true">
+			<texCommand execute="true" path="latex.exe" arguments="--src -interaction=nonstopmode -max-print-line=120 &quot;%Wm&quot;"/>
+			<bibTexCommand execute="true" path="bibtex.exe" arguments="&quot;%bm&quot;"/>
+			<makeIndexCommand execute="true" path="makeindex.exe" arguments="-s personal.ist -g &quot;%bm&quot;"/>
+			<postProcessors>
+				<processor name="DviPs (PDF)" path="dvips.exe" arguments="-o &quot;%Bm-pics.ps&quot; &quot;%Bm.dvi&quot;" inputFile="" outputFile=""/>
+				<processor name="ps2pdf" path="ps2pdf" arguments="&quot;%Bm-pics.ps&quot;" inputFile="" outputFile=""/>
+				<processor name="PDFLatex" path="pdflatex.exe" arguments="-interaction=nonstopmode -max-print-line=120 &quot;%pm&quot;" inputFile="" outputFile=""/>
+			</postProcessors>
+			<viewer path="AcroRd32.exe" closeBeforeCompilation="true">
+				<viewProjectCommand type="dde">
+					<commandLineCommand path="ACRORD32.EXE" arguments="-1 &quot;%bm.dvi&quot;"/>
+					<ddeCommand path="AcroRd32.exe" server="acroview" topic="control" command="[DocOpen(&quot;%bm.pdf&quot;)][FileOpen(&quot;%bm.pdf&quot;)]"/>
+				</viewProjectCommand>
+				<viewCurrentFileCommand type="dde">
+					<commandLineCommand path="ACRORD32.EXE" arguments="-1 -s %l&quot;%Wc&quot; &quot;%bm.dvi&quot;"/>
+					<ddeCommand path="AcroRd32.exe" server="acroview" topic="control" command="[DocOpen(&quot;%bm.pdf&quot;)][FileOpen(&quot;%bm.pdf&quot;)]"/>
+				</viewCurrentFileCommand>
+				<viewCloseCommand type="dde">
+					<commandLineCommand path="" arguments=""/>
+					<ddeCommand path="" server="acroview" topic="control" command="[DocClose(&quot;%bm.pdf&quot;)]"/>
+				</viewCloseCommand>
+			</viewer>
+		</outputProfile>
+		<outputProfile name="nomencl&amp;LaTeX=&gt;pst-pdf=&gt;PDF" stopOnLatexError="true">
+			<texCommand execute="true" path="latex.exe" arguments="--src -interaction=nonstopmode -max-print-line=120 &quot;%Wm&quot;"/>
+			<bibTexCommand execute="true" path="bibtex.exe" arguments="&quot;%bm&quot;"/>
+			<makeIndexCommand execute="true" path="makeindex.exe" arguments="-s personal.ist -g &quot;%bm&quot;"/>
+			<postProcessors>
+				<processor name="DviPs (PDF)" path="dvips.exe" arguments="-o &quot;%Bm-pics.ps&quot; &quot;%Bm.dvi&quot;" inputFile="" outputFile=""/>
+				<processor name="ps2pdf" path="ps2pdf" arguments="&quot;%Bm-pics.ps&quot;" inputFile="" outputFile=""/>
+				<processor name="PDFLatex" path="pdflatex.exe" arguments="-interaction=nonstopmode -max-print-line=120 &quot;%pm&quot;" inputFile="" outputFile=""/>
+				<processor name="Nomencl" path="makeindex.exe" arguments=" &quot;%bm.nlo&quot; -s nomencl.ist -o &quot;%bm.nls&quot;" inputFile="" outputFile=""/>
+				<processor name="PDFLatex2" path="pdflatex.exe" arguments="-interaction=nonstopmode -max-print-line=120 &quot;%pm&quot;" inputFile="" outputFile=""/>
+			</postProcessors>
+			<viewer path="AcroRd32.exe" closeBeforeCompilation="true">
+				<viewProjectCommand type="dde">
+					<commandLineCommand path="ACRORD32.EXE" arguments="-1 &quot;%bm.dvi&quot;"/>
+					<ddeCommand path="AcroRd32.exe" server="acroview" topic="control" command="[DocOpen(&quot;%bm.pdf&quot;)][FileOpen(&quot;%bm.pdf&quot;)]"/>
+				</viewProjectCommand>
+				<viewCurrentFileCommand type="dde">
+					<commandLineCommand path="ACRORD32.EXE" arguments="-1 -s %l&quot;%Wc&quot; &quot;%bm.dvi&quot;"/>
+					<ddeCommand path="AcroRd32.exe" server="acroview" topic="control" command="[DocOpen(&quot;%bm.pdf&quot;)][FileOpen(&quot;%bm.pdf&quot;)]"/>
+				</viewCurrentFileCommand>
+				<viewCloseCommand type="dde">
+					<commandLineCommand path="" arguments=""/>
+					<ddeCommand path="" server="acroview" topic="control" command="[DocClose(&quot;%bm.pdf&quot;)]"/>
+				</viewCloseCommand>
+			</viewer>
+		</outputProfile>
+	</outputProfileList>
+</txcop:outputProfiles>
