@@ -1,0 +1,89 @@
+% ----------------------------------------------------------------
+% Unterlagen
+% ----------------------------------------------------------------
+\documentclass[11pt,oneside,titlepage,openany,a4paper]{book} % draft
+\usepackage[T1]{fontenc}         % Aktivierung der ec-Zeichensätze, NFSS
+\usepackage{ngerman}             % für deutsche Trennregeln
+\usepackage{inputenc}              % deutsche Umlaute
+\usepackage{fancyhdr}            % Fuss- und Kopfzeile
+%\usepackage{flafter}            % Gleitobjekte immer nach Text
+\usepackage[intlimits]{amsmath}  % AMS-Latex
+\usepackage{amssymb}             % AMS-Latex
+\usepackage{dsfont,exscale}
+\usepackage[thmmarks]{ntheorem}
+\usepackage{pst-all}
+\usepackage{pst-pdf}
+
+%\usepackage{pstricks}
+%\usepackage[usenames]{pstcol}
+%\usepackage{pst-plot}
+%\usepackage{pst-3dplot}
+%\usepackage{pst-vue3d}
+%\usepackage{pst-key}
+
+ \pagestyle{fancy}
+ \fancyhf{}
+ \renewcommand{\headrulewidth}{0.4pt}
+ \renewcommand{\footrulewidth}{0.4pt}
+ \lhead{\sf \leftmark}
+ \rhead{\thepage}
+ \lfoot{\small Zürcher Hochschule Winterthur}
+ \rfoot{{\small Maz, \today} \ \texttt{\jobname.tex}}       %<--- file name %
+ \setlength{\parskip}{3ex plus0.5ex minus0.5ex}
+ \setlength{\parindent}{0em}
+ \setlength{\headsep}{1.5cm}
+ \setlength{\textwidth}{15cm}
+ \setlength{\textheight}{22cm}
+ \setlength{\headwidth}{15cm}
+ \setlength{\headheight}{14pt}
+ \setlength{\fboxsep}{0.3cm}
+ \newfont{\titelschrift}{csssbx10 at 37pt}
+ \newfont{\bbdingschrift}{bbding10 at 8pt}
+ \definecolor{grau}{gray}{0.8}
+
+\newcommand{\rahmen}[1]{\vspace*{1ex}\fcolorbox{black}{grau}{\parbox[b]{14.3cm}{\vspace*{-1.5ex}#1\vspace*{-0.5ex}}}\vspace*{2ex}}
+
+\theoremstyle{break}
+\theorembodyfont{\normalfont}
+\setlength{\theorempreskipamount}{0.5ex plus0.5ex }
+\setlength{\theorempostskipamount}{0ex}
+
+\newtheorem{satz}{Satz}[chapter]
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{beispiel}{Beispiel}[chapter]
+\newtheorem{aufgabe}{Aufgabe}
+
+\theoremstyle{nonumberbreak}
+\setlength{\theorempreskipamount}{2.5ex plus0.5ex
+} \theoremsymbol{\ensuremath{\Box}}
+\newtheorem{beweis}{Beweis}
+
+\newcounter{liste123}
+\newenvironment{list123}{\begin{list}
+{\arabic{liste123})}{\usecounter{liste123}
+\setlength{\parskip}{0ex plus0.5ex}
+\setlength{\parsep}{0.5ex plus0.2ex minus0.1ex}
+\setlength{\labelsep}{0.3cm}
+\setlength{\leftmargin}{0.5cm}
+\setlength{\labelwidth}{0.3cm}
+\setlength{\partopsep}{0cm}
+\setlength{\itemsep}{0.5ex}
+}}
+{\end{list}}
+
+\newcommand{\folgerung}{{\bf Folgerung} \newline}
+\newcommand{\bemerkung}{{\bf Bemerkung} \newline}
+\newcommand{\refAbb}[1]{Abbildung \ref{#1}}
+
+%\newcommand{\qed}{\hfill\mbox{\bbdingschrift\symbol{102}}}
+\newcommand{\N}{\mathds N}
+\newcommand{\Z}{\mathds Z}
+\newcommand{\Q}{\mathds Q}
+\newcommand{\R}{\mathds R}
+\newcommand{\C}{\mathds C}
+
+\newcommand{\vektor}[1]{
+\begin{pmatrix}
+  #1
+\end{pmatrix}}
+%  $\vektor{2\\3\\5\\7}$ Aufruf
