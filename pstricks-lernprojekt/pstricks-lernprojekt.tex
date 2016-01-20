@@ -1,0 +1,101 @@
+\input{header}
+
+\begin{document}
+%\maketitle
+%\tableofcontents
+\pagenumbering{arabic}
+%\pagenumbering{roman}
+
+
+\begin{figure}
+\centering
+	\begin{pspicture}(0,0)(4,4.2)
+		\psgrid[griddots=0, gridlabels=5pt, subgriddiv=3]
+		\pstVerb{2 setlinejoin}%Linienlaufenrundaus
+		\pspolygon*[linecolor=blue, linewidth=1.5pt](0,0)(0,4)(3,2)(2,4)
+	\end{pspicture}
+\end{figure}
+%
+%\begin{figure}
+%	\psset{yunit=3mm, xunit=1mm}
+%	\begin{pspicture}(-1,-1.5)(110,1.5)
+%		\psplot[linecolor=gray,linewidth=1.5pt,plotstyle=curve]{0}{90}{x sin dup mul}
+%		\psplot[plotpoints=100]{0}{90}{x sin x 2 div 2 exp cos mul}
+%		\psline{<->}(0,-1)(0,1)
+%		\psline{->}(100,0)
+%	\end{pspicture}
+%\end{figure}
+%
+%\begin{figure}
+%\centering
+%	\psset{unit=1cm}
+%	\begin{pspicture}(-0.5,-0.8)(4,6)
+%		\psgrid[gridlabels=0pt, subgriddiv=0](0,0)(3,5)
+%		\psaxes[ tickstyle=bottom, labelsep=5pt]{->}(3.5,5.5)
+%		\rput(3.5,-.2){$x$}
+%		\rput(-.2,5.5){$y$}
+%		\rput(2.4,2.7){$y=x^2$}
+%		\psplot[plotpoints=200, linewidth=2pt]{0}{2.25}{x 2 exp}
+%	\end{pspicture}
+%\end{figure}
+	
+%\begin{figure}
+%\centering
+%	\psset{unit=1cm}
+%	\begin{pspicture}(3,3)
+%	\multido{\n=0+1}{4}{	
+%		\pnode(\n+0.5,0.5){A\n}
+%		\pnode(\n+0.5,2.5){B\n}
+%		\resistor(A\n)(B\n){$R_\n$}
+%	}
+%	\end{pspicture}
+%\end{figure}
+
+%\begin{figure}
+%\centering
+%	\psset{unit=1cm}
+%	\begin{pspicture}(6,3)
+%		\pnode(1.5,0.5){A}
+%		\pnode(1.5,2.5){B}
+%		\resistor[labeloffset=0](A)(B){$R_1$}
+%
+%		\pnode(2.5,0.5){C}
+%		\pnode(2.5,2.5){D}
+%		\resistor[labeloffset=0](C)(D){$R_2$}
+%
+%		\pnode(3.5,0.5){C}
+%		\pnode(3.5,2.5){D}
+%		\resistor[labeloffset=0](C)(D){$R_3$}
+%
+%		\pnode(4.5,0.5){C}
+%		\pnode(4.5,2.5){D}
+%		\resistor[labeloffset=0](C)(D){$R_3$}
+%
+%		\pnode(5,0.5){E}
+%		\pnode(5,2.5){F}		
+%		\psline(E)(A)
+%		\psline(F)(B)
+%
+%		\rput(5.2,1.5){...}
+%	\end{pspicture}
+%\end{figure}
+
+\begin{figure}
+\psset{xunit=1cm,yunit=1cm,runit=1cm}
+\begin{pspicture}(2.5,2.5)(2.5,2.5)
+\SpecialCoor
+\degrees[1.1]
+\multido{\n=0.0+0.1}{11}{%
+\newgray{mygray}{\n}
+\rput{\n}{%
+	\pswedge[fillstyle=solid,%
+	fillcolor=mygray]{2}{0.05}{0.05}
+}
+\uput{2.2}[\n](0,0){\tiny\n}
+}
+\end{pspicture}
+\end{figure}
+
+%\appendix
+%\printindex
+\end{document}
