@@ -1,0 +1,337 @@
+\section{Abbildungen}
+\label{sec:Abbildungen}
+
+Eine Abbildung $f$ ordnet \emph{jedem} Element der Menge $A$ \emph{genau ein} Element der Menge $B$ zu.
+	
+	\begin{align*}
+	f:\quad A&\rightarrow B  \\
+	x&\mapsto y=f(x)	
+	\end{align*}
+$A$: Definitionsbereich von $f$ \\
+$B$: Wertebereich von $f$
+
+\[
+\int_1^2 f(x) dx
+\]
+
+\section{Gleichheit von zwei Abbildungen}
+\label{sec:GleichheitVonZweiAbbildungen}
+
+Zwei Abbildungen $f$, $g$ heissen \emph{gleich} genau dann, wenn ihre \emph{Definitions-} und \emph{Wertebereiche übereinstimmen}, und wenn für jedes $x\in A$ gilt:
+\[
+	f(x)=g(x)
+\]
+
+
+\section{Lineare Abbildungen von $\R ^n \rightarrow \R ^m$}
+\label{sec:LineareAbbildungenVonRNRM}
+
+\[
+\underbrace{\left( \begin{array}{c} y_1 \\ y_2 \\ \vdots \\ y_n \end{array} \right)}_{y} =
+f\left( \begin{array}{c} x_1 \\ x_2 \\ \vdots \\ x_n \end{array} \right) = 
+\underbrace{\left( \begin{array}{cccc} a_{11} & a_{12} & \hdots & a_{1n}\\ 
+																			 a_{21} & a_{22} & \hdots & a_{2n} \\
+																			 \vdots & \vdots & \ddots & \vdots \\ 
+																			 a_{m1} & a_{m2} & \hdots & a_{mn} \end{array}\right)}_{A_f} \cdot 
+\underbrace{\left( \begin{array}{c} x_1 \\ x_2 \\ \vdots \\ x_n \end{array} \right)}_{x}
+\]
+Die Matrix $A_f$ heisst die \emph{Standarddarstellungsmatrix}.
+
+
+\section{Aufstellen der Standarddarstellungsmatrix einer Funktion $f$}
+\label{sec:AufstellenDerStandarddarstellungsmatrixEinerFunktionF}
+
+Die Standarddarstellungsmatrix einer Funktion $f: \R ^n \rightarrow \R ^m$ erhällt man, indem man die Funktion $f$ auf die Standardeinheitsvektoren von $\R ^n$ ($e_1, e_2,\ldots, e_n$) anwendet.
+\[
+A_f = \left(f(e_1) \quad f(e_2) \quad \cdots \quad f(e_n)\right) =
+\underbrace{\left(f \left( \begin{array}{c} 1 \\ 
+																0  \\
+																\vdots  \\ 
+																0  \end{array}\right) \quad
+f \left( \begin{array}{c} 0 \\ 
+													1  \\
+													\vdots  \\ 
+													0  \end{array}\right) \quad
+\cdots \quad
+f \left( \begin{array}{c} 0 \\ 
+													0  \\
+													\vdots  \\ 
+													1  \end{array}\right) \quad
+\right)}_{(n\times m)-Matrix}
+\]
+
+
+\section{Komposition von linearen Abbildungen}
+\label{sec:KompositionVonLinearenAbbildungen}
+
+Das hintereinanderschalten von linearen Abbildungen
+	\begin{align*}
+	\R ^p \stackrel{g}{\longrightarrow} \R ^n \stackrel{f}{\longrightarrow} \R ^m \\
+	x \mapsto y=g(x) \mapsto z=f(y)=f(g(x))	
+	\end{align*}
+mit passendem Werte- und Definitionsbereich wird als die \emph{Komposition} $f\circ g$ bezeichnet.
+
+	\begin{align*}
+	(f\circ g):\quad \R ^p &\rightarrow \R ^m  \\
+	x&\mapsto (f\circ g)(x) := f(g(x))	
+	\end{align*}
+Die Standarddarstellungsmatrix einer komponierten Funktion $f\circ g$ erhällt man aus der Matrix-Multiplikation der einzelnen Standarddarstellungsmatrizen $A_f$, $A_g$.
+\[
+A_{f\circ g} = A_f \cdot A_g
+\]
+Die Reihenfolge in der lineare Abbildungen kompmoniert werden spielt eine Rolle. Allg: $f\circ g \neq g\circ f$
+
+
+\section{Eigenschaften von linearen Abbildungen}
+\label{sec:EigenschaftenVonLinearenAbbildungen}
+
+Eine Abbildung $f: \R ^n \rightarrow \R ^m$ ist linear genau dann, wenn sie folgende Eigenschaften erfüllt:
+
+\[
+f(x+y) = f(x) + f(y) \quad (\forall x, y \in \R ^n )
+\]
+\[
+f(c\cdot x) = c\cdot f(x) \quad (\forall x \in \R ^n, \forall c \in \R)
+\]
+
+
+\section{Kern und Bild einer Abbildung}
+\label{sec:KernUndBildEinerAbbildung}
+
+\subsection{Kern einer Abbildung}
+\label{sec:KernEinerAbbildung}
+Die Teilmenge der Definitionsbereichs $\R ^n$ der linearen Abbildung
+$f: \R ^n \rightarrow \R ^m$, welcher auf ${O} \in \R ^m$ (Nullvektor) abgebildet wird, heisst der \emph{Kern} von $f$.
+\[
+ker \, f =\left\{ u \in \R ^n, f(u)=O \in \R ^m\right\}
+\]
+Eine lineare Abbildung ist injektiv falls $ker f = \left\{ 0 \right\}$
+
+\subsection{Bild einer Abbildung}
+\label{sec:BildEinerAbbildung}
+Die Teilmenge des Wertebereichs $\R ^m$, die von $f$ als Bildelemente beansprucht werden, heisst das \emph{Bild} von $f$.
+\[
+im \, f = \left\{ f(u) \in \R ^m, u \in \R ^n \right\}
+\]
+
+\section{Umkehrabbildungen von linearen Abbildungen}
+\label{sec:UmkehrabbildungenVonLinearenAbbildungen}
+
+Die Umkehrabbildung einer linearen Abbildung erhällt man, indem man die Standarddarstellungsmatrix $A_f$ invertiert.
+\[
+A_{f^{-1}} = A_f^{-1}
+\]
+$A_f$: ($n \times n$)-Matrix \\
+$\det A_f \neq 0$
+
+\section{Spiegelungen in der Ebene}
+\label{sec:SpiegelungenInDerEbene}
+Mithilfe der folgenden Standarddarstellungsmatrizen kann man einen Vektor $w$ in der Ebene $\R ^2$ spiegeln.
+\[
+f(x) = A_f \cdot w
+\]
+
+\subsection{Spiegelung an der x-Achse}
+\label{sec:SpiegelungAnDerXAchse}
+\[
+A_f = \left( \begin{array}{cc} 1 & 0 \\ 
+															 0 & -1
+			\end{array}\right)
+\]
+
+\subsection{Spiegelung an der y-Achse}
+\label{sec:SpiegelungAnDerYAchse}
+\[
+A_f = \left( \begin{array}{cc} -1 & 0 \\ 
+															 0 & 1
+			\end{array}\right)
+\]
+
+\subsection{Spiegelung an einer Geraden (durch $O$)}
+\label{sec:SpiegelungAnEinerGeradenDurchO}
+Einen Vektor $w$ spiegelt man an einer Geraden $g = \left\{ r\cdot \left( \begin{array}{c} v_x \\v_y\end{array}\right),\, r \in \R \right\}$ mit folgender Standarddarstellungsmatrix:
+\[
+A_f = \frac{1}{v_x^2+v_y^2}\left( \begin{array}{cc} 
+															v_x^2 - v_y^2   & 2v_xv_y \\ 
+															2v_xv_y         & -v_x^2 + v_y^2
+														\end{array}\right)
+\]
+
+
+\section{Reflexionen im Raum}
+\label{sec:ReflexionenImRaum}
+Mithilfe der folgenden Standarddarstellungsmatrizen kann man einen Vektor $w$ im Raum $\R ^3$ spiegeln.
+\[
+f(x) = A_f \cdot w
+\]
+
+\subsection{Spiegelung an der x-y-Ebene}
+\label{sec:SpiegelungAnDerXYEbene}
+\[
+A_f = \left( \begin{array}{ccc} 1 & 0 & 0 \\ 
+															  0 & 1 & 0 \\
+															  0 & 0 & -1 \\
+			\end{array}\right)
+\]
+
+\subsection{Spiegelung an der x-z-Ebene}
+\label{sec:SpiegelungAnDerXZEbene}
+\[
+A_f = \left( \begin{array}{ccc} 1 & 0 & 0 \\ 
+															  0 & -1 & 0 \\
+															  0 & 0 & 1 \\
+			\end{array}\right)
+\]
+
+\subsection{Spiegelung an der y-z-Ebene}
+\label{sec:SpiegelungAnDerYZEbene}
+\[
+A_f = \left( \begin{array}{ccc} -1 & 0 & 0 \\ 
+															  0 & 1 & 0 \\
+															  0 & 0 & 1 \\
+			\end{array}\right)
+\]
+
+\subsection{Spiegelung an einer beliebigen Ebene (durch $O$)}
+\label{sec:SpiegelungAnEinerBeliebigenEbeneDurchO}
+Um einen Vektor $w$ an einer gegebenen Ebene $E$ zu spiegeln verwendet man folgende Standarddarstellungsmatrix:
+\[
+A_f = \left( \begin{array}{ccc} 1 - 2n_x^2 & -2n_xn_y & -2n_xn_z \\ 
+															  -2n_xn_y & 1 - 2n_y^2 & -2n_yn_z \\
+															  -2n_xn_z & -2n_yn_z & 1 - 2n_z^2 \\
+			\end{array}\right)
+\]
+$n$: Einheitsnormalenvektor der Ebene $E$.
+
+\subsubsection{Einheitsnormalenvektor einer Ebene}
+\label{sec:EinheitsnormalenvektorEinerEbene}
+Gegeben sei die Ebene $E$
+\[
+E = \left\{ a\cdot \left( \begin{array}{c} u_x \\u_y \\u_z \end{array}\right) + b\cdot \left( \begin{array}{c} v_x \\v_y \\v_z\end{array}\right),\, a,b \in \R \right\}
+\]
+oder
+\[
+Ax + By + Cz = 0
+\]
+Den Einheitsnormalenvektor zur Ebene $E$ erhällt man aus:
+$n = \frac{u\times v}{\left|u\times v\right|}$ oder $n = \frac{\left( \begin{smallmatrix} A \\B \\C \end{smallmatrix}\right)}{\left|\left( \begin{smallmatrix} A \\B \\C \end{smallmatrix}\right)\right|}$
+
+
+\section{Normalprojektion auf eine Gerade durch $O$ in $\R ^2$}
+\label{sec:NormalprojektionAufEineGeradeDurchOInR2}
+Um einen Vektor $w$ auf eine gegebene Gerade
+$g = \left\{r \cdot \left( \begin{array}{c} u_x \\ 
+															  						u_y 
+			\end{array}\right), \, r \in \R \right\}$
+zu projizieren verwendet man folgende Standarddarstellungsmatrix.
+\[
+A_f = \frac{1}{u_x^2+u_y^2}\left( \begin{array}{cc} 
+														u_x^2	& u_xu_y \\ 
+														u_xu_y & u_y^2
+														\end{array}\right)
+\]
+
+
+\section{Normalprojektion auf eine Ebene durch $O$ in $\R ^3$}
+\label{sec:NormalprojektionAufEineEbeneDurchOInR3}
+
+Um einen Vektor $w$ auf eine gegebene Ebene $E$ (siehe: \ref{sec:EinheitsnormalenvektorEinerEbene}) zu
+projizieren verwendet man folgende Standarddarstellungsmatrix.
+
+\[
+A_f = \left( \begin{array}{ccc} 1-n_x^2 & -n_xn_y & -n_xn_z \\ 
+															  -n_xn_y & 1-n_y		& -n_yn_z \\
+															  -n_xn_z & -n_yn_z & 1-n_z^2
+			\end{array}\right)
+\]
+$n$: Einheitsnormalenvektor auf Ebene $E$. Siehe \ref{sec:SpiegelungAnEinerBeliebigenEbeneDurchO}
+
+
+\section{Drehungen in der Ebene}
+\label{sec:DrehungenInDerEbene}
+Eine Drehung in $\R^2$ um den Nullpunkt mit dem winkel $\varphi$ lässt sich als eine lineare Abbildung $f$ mit der Standarddarstellungsmatrix
+\[
+A_f = \left( \begin{array}{cc} \cos \varphi & -\sin \varphi\\ 
+															  \sin \varphi & \cos \varphi
+			\end{array}\right)
+\]
+darstellen.
+
+
+\section{Drehungen im Raum}
+\label{sec:DrehungenImRaum}
+Drehungen im dreidimensionalen Raum haben eine gerichtete Drehachse. Zur bestimmung der positiven Drehrichtung verwendet man die "`Rechte-Hand Regel"'.
+
+\subsection{Drehung um die positive x-Achse}
+\label{sec:DrehungUmDiePositiveXAchse}
+\[
+A_f = \left( \begin{array}{ccc} 1 & 0 & 0 \\ 
+															  0 & \cos \varphi & -\sin \varphi\\ 
+															  0 & \sin \varphi & \cos \varphi
+			\end{array}\right)
+\]
+
+\subsection{Drehung um die positive y-Achse}
+\label{sec:DrehungUmDiePositiveYAchse}
+\[
+A_f = \left( \begin{array}{ccc} \cos \varphi & 0 & \sin \varphi\\ 
+																	0					&	1	&	0 \\
+															  -\sin \varphi &0 &  \cos \varphi
+			\end{array}\right)
+\]
+
+\subsection{Drehung um die positive z-Achse}
+\label{sec:DrehungUmDiePositiveZAchse}
+\[
+A_f = \left( \begin{array}{ccc} \cos \varphi & -\sin \varphi & 0\\ 
+															   \sin \varphi & \cos \varphi & 0 \\
+															   0				&		0					&			1
+			\end{array}\right)
+\]
+
+
+
+\section{Eigenwerte und Eigenvektoren von liearen Abbildungen $\R^n\rightarrow \R^n$}
+\label{sec:EigenverteUndEigenvektorenVonLiearenAbbildungenRNRN}
+
+Den \emph{Skalar} $\lambda \in \R$, für den die Gleichung
+\[
+f(w)=\lambda \cdot w
+\]
+nicht-triviale Lösungsvektoren $w \in \R^n$ besitzt nennt man \emph{Eigenwert} von $f$.\\
+Die nicht-trivialen \emph{Lösungsvektoren} $w \in \R^n$ zu einem gegebenen Eigenwert $\lambda$ heissen \emph{Eigenvektoren} von $f$ zum Eigenwert $\lambda$.
+
+\subsection{Bestimmung der Eigenwerte}
+\label{sec:BestimmungDerEigenwerte}
+Durch lösen des Gleichungssystems
+\[
+(A_f - \lambda \cdot I_n) = O
+\]
+ergeben sich die Eigenwerte $\lambda_i$.
+
+Feststellungen:
+\begin{enumerate}
+	\item $\det(A_f - \lambda \cdot I_n)$ ist ein Polynom n-ten Grades in der Variablen $\lambda$ (\emph{charakteristische Polynom} von $f$)
+	
+	\item Das Poynom $\det(A_f - \lambda \cdot I_n)$ hat höchstens $n$ reelle Nullstellen
+	
+	\item Diese \emph{Nullstellen} sind \emph{genau die Eigenwerte} von $f$
+\end{enumerate}
+
+
+\subsection{Bestimmung der Eigenvektoren zu einem Eigenwert von $\lambda$}
+\label{sec:BestimmungDerEigenvektorenZuEinemEigenwertVonLambda}
+
+Den Eigenvektor $w_i$ zu einem Eigenwert $\lambda_i$ erhällt man indem man das Gleichungssystem
+\[
+(A_f - \lambda_i \cdot I_n) \cdot w_i = O
+\]
+löst. Zu einem Eigenwert gibt es immer eine mindestens einparametrige Schar von Eigenvektoren ($\infty$-viele Lösungen). Die Nulllösung wird nicht als Lösung angesehen.
+\\
+Falls $w \in \R^n$ ein Eigenvektor zum Eigenwert $\lambda$ ist, so ist für jeden Skalar $ \alpha \in \R$ auch $\alpha \cdot w$ ein Eigenvektor zu $\lambda$.
+
+
+\section{Eigenraum zu einem Eigenwert}
+\label{sec:EigenraumZuEinemEigenwert}
+
+Die Menge aller Eigenvektoren zu einem Eigenwert $\lambda$ von $f$, ergänzt um den Nullvektor, nennt man den \emph{Eigenraum} von $\lambda$.
