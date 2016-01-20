@@ -1,0 +1,86 @@
+\documentclass[a4paper,12pt]{scrartcl}
+
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{textcomp}
+\usepackage{float}
+
+\usepackage{pstricks}
+\usepackage{pst-all}
+\usepackage{pstricks-add, pst-plot, pst-node}
+\usepackage{pst-pdf}
+\title{Titel des Dokuments}
+\author{Lukas Woodtli}
+\date{\copyright \today}
+
+%
+\begin{document}
+%\maketitle
+%\tableofcontents
+\subsection{blab}
+	
+texttext12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, 
+
+\begin{figure}[hbt]
+\begin{center}
+\psset{unit=1cm}
+\begin{pspicture}(0, 0)(4, -5)
+	%\psgrid
+	\pscircle(0, 0){0.1}
+	\psline[linewidth=3pt, linecolor=gray](0, 0)(3, 0)
+	\psline(0, -1)(3, -1)
+	{
+	\psline(0, -2)(3, -2)
+	\psset{linestyle=dashed}
+	\psline(0, -3)(3, -3)
+	\psline(0, -4)(3, -4)
+	}
+	\psline(0, -5)(3, -5)
+\end{pspicture}
+\caption{testtest}
+\end{center}
+\end{figure}
+text text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, 
+
+\section{bla}
+text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, text12, text, 
+
+\begin{figure}[!hbt]
+\begin{center}
+\begin{pspicture}(-1, 1)(2, 2)
+	\psset{arrows=->, unit=3cm, arcangle=20, labelsep=2.5pt, subgriddiv=10, shortput=nab}
+	\psgrid
+	\pnode(-0.5, 0){0}
+	
+	\cnodeput(0, 0){q0}{$q_0$}
+	\cnodeput(1, 0){q1}{$q_1$}
+	\cnodeput[doubleline=true](2, 0){q2}{$q_2$}
+	{ 
+		\small %Beschriftungen der Verbindungen sollen kleiner gesetzt werden
+		\ncarc{0}{q0} %. Anfangszustand
+		\ncarc{q0}{q1}^{$0$}
+		\ncarc{q1}{q2}^{$0$}
+		\ncarc{q1}{q0}^{$1$}
+		%die „Loops“ – q0-q0-Verbindungen etc.
+		\nccircle[angle=180]{q0}{0.4cm}_{$1$} %Der soll nach unten gehen
+		\nccircle[angle=-90]{q2}{0.4cm}_{$0,1$} %und der rechts des Zustands
+}
+\end{pspicture}
+\caption{automat}
+\end{center}
+\end{figure}
+
+\begin{figure}[hbt]
+\begin{center}
+\begin{pspicture}(0, 0)(3.5, 5)
+	\psset{unit=1cm}
+	\psgrid
+	\psplot{0}{2.5}{x 2 exp}
+\end{pspicture}
+\caption{Plot}
+\end{center}
+\end{figure}
+
+
+\end{document}

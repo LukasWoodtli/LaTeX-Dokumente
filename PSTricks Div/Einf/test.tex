@@ -1,0 +1,22 @@
+\documentclass[12pt]{article}
+
+\usepackage{pstricks}
+\usepackage{pst-pdf}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{pspicture}(-5.25,-5.25)(5.25,5.25)%
+  \pscircle*[linecolor=cyan]{5}
+  \psgrid[subgriddiv=0,gridcolor=lightgray,gridlabels=0pt]
+  \Huge\sffamily\bfseries
+  \rput(-4.5,4.5){A} \rput(4.5,4.5){B}
+  \rput(-4.5,-4.5){C}\rput(4.5,-4.5){D}
+  \rput(0,0){pst-pdf}
+  \rmfamily
+  \rput(0,-3.8){PSTricks}
+  \rput(0,3.8){\LaTeX}
+\end{pspicture}
+
+\end{document}

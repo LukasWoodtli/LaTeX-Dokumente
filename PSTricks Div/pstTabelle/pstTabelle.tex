@@ -1,0 +1,60 @@
+
+
+\documentclass[a4paper,10pt]{article}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{pst-plot}
+\usepackage{pst-all}
+\usepackage{pstricks-add}
+\usepackage{pst-pdf}
+\renewcommand{\multirowsetup}{\centering}
+\renewcommand{\arraystretch}{1.5}
+
+\begin{document}
+    \section{Results}
+        \begin{tabular}{|c|c|c|}
+            \hline
+            \multicolumn{1}{|m{2cm}|}{\centering Input Signal}
+            &\multicolumn{2}{m{8cm}|}{\centering Output Signal}\\
+            \hline
+            \multirow{3}[80]{2cm}{1 kHz\\1 V$_{pp}$\\Sine wave}%
+             & \textsc{mclk}-in%
+             &      \psset{yunit=0.5cm,xunit=0.5cm}
+                    \begin{pspicture}[shift=.45](-5,-5.5)(5,6)
+                        \psgrid[subgriddiv=0,griddots=5,gridlabels=0](-5,-5)(5,5)
+                        \psaxes[linewidth=1pt,%
+                            ticks=all,%
+                            subticks=5,%
+                            labels=none](0,0)(-5,-5)(5,5)
+                        \uput[-30](5,0.4){$\mathbf{t}$}
+                        \uput[120](0.35,5){$\mathbf{V}$}
+                    \end{pspicture}\\
+             \cline{2-3}
+             & \textsc{med}-in %
+             &      \psset{yunit=0.5cm,xunit=0.5cm}
+                    \begin{pspicture}[shift=.45](-5,-5)(5,6)
+                        \psgrid[subgriddiv=0,griddots=5,gridlabels=0](-5,-5)(5,5)
+                        \psaxes[linewidth=1pt,%
+                            ticks=all,%
+                            subticks=5,%
+                            labels=none](0,0)(-5,-5)(5,5)
+                        \uput[-30](5,0.4){$\mathbf{t}$}
+                        \uput[120](0.35,5){$\mathbf{V}$}
+                    \end{pspicture}\\
+             \cline{2-3}
+             & \textsc{me}-out %
+             &      \psset{yunit=0.5cm,xunit=0.5cm}
+                    \begin{pspicture}[shift=.45](-5,-5)(5,6)
+                        \psgrid[subgriddiv=0,griddots=5,gridlabels=0](-5,-5)(5,5)
+                        \psaxes[linewidth=1pt,%
+                            ticks=all,%
+                            subticks=5,%
+                            labels=none](0,0)(-5,-5)(5,5)
+                        \uput[-30](5,0.4){$\mathbf{t}$}
+                        \uput[120](0.35,5){$\mathbf{V}$}
+                    \end{pspicture}\\
+             \hline
+        \end{tabular}
+    \clearpage
+\end{document}
+
