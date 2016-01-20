@@ -1,0 +1,23 @@
+\documentclass{article}
+\usepackage{pst-plot,pstricks}
+\pagestyle{empty}
+\begin{document}
+\psset{xunit=1cm,yunit=1.5cm}
+\begin{pspicture}(0,0)(4.1,4.1)
+   \psaxes{->}(0,0)(0,0)(4,4)
+   \psplot[plotstyle=curve,linewidth=1.5pt]{1}{4}%
+     {x x mul 1 sub sqrt}
+   \psplot[plotstyle=curve,linewidth=.5pt,plotpoints=10]{0}{4}{x}
+   \psline(3.5,0)(3.5,3.3541)
+   \psline[linestyle=dashed](0,0)(3.5,3.3541)
+   \psline(1,0)(1,0.9583)
+   \rput(3.9,-0.25){$\mathbf{x}$}
+   \rput(-0.3,3.9){$\mathbf{y}$}
+   \rput(3,0.5){$\cosh t$}
+   \psline{->}(3,0.35)(3.45,0.05)
+   \rput(3,1.7){$\sinh t$}
+   \psbezier{->}(3,1.55)(2.8,1.5)(2.9,1.3)(3.4,1.5)
+   \rput(0.6,1.2){$\tanh t$}
+   \psbezier{->}(0.6,1.05)(0.4,0.8)(0.2,0.7)(0.9,0.5)
+\end{pspicture}
+\end{document}

@@ -1,0 +1,44 @@
+\documentclass[11pt,a4paper]{scrartcl}
+\usepackage[ngerman]{babel}
+\usepackage[applemac]{inputenc}
+\usepackage{graphicx, url}
+\DeclareGraphicsExtensions{.jpg}
+\usepackage[T1]{fontenc}
+\usepackage{ae}
+\usepackage{amsmath, amssymb}
+%\usepackage{wasysym}
+\usepackage[top=1cm, left=2cm, right=2cm, bottom=2cm]{geometry}
+\usepackage{hyperref}
+\parindent = 0.0in
+%\pagestyle{empty}
+
+
+\begin{document}
+
+\title{Konstruktion eines rechtwinkligen Dreiecks aus Kathete und ihr nicht anliegendem Hypotenusenabschnitt\footnote{Lšsung gefunden im Internet unter der URL: \url{http://www.ijon.de/mathe/dreieck1/index.html}}}
+\author{\href{mailto:hhorn@gmx.de}{Holger Horn}}
+\maketitle
+
+\thispagestyle{empty}
+
+\textbf{Aufgabe:}\\
+
+Konstruiere ein rechtwinkliges Dreieck aus einer Kathete und dem der anderen Kathete anliegenden Hypotenusenabschnitt.
+
+Sei o.B.d.A. gegeben: $b, p$ (s. Schaufigur).
+
+\begin{center}
+\includegraphics[viewport=50 280 500 600, scale=0.8]{Bilder/Dreieck.pdf}
+\end{center}
+
+\textbf{Nachweis der Richtigkeit der Konstruktion:}\\
+
+Nach dem Satz des Pythagoras und dem Kathetensatz gilt:
+\begin{eqnarray*}
+x^2&=&b^2+\frac{p^2}{4}\\
+&=&(c-p)c+\frac{p^2}{4}\\
+&=&\left(c-\frac{p}{2}\right)^2
+\end{eqnarray*}
+$$\Longrightarrow x= c -\frac{p}{2}\Longrightarrow x+\frac{p}{2}=c$$
+
+\end{document}

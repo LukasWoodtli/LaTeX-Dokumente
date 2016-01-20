@@ -1,0 +1,124 @@
+% LaTeX-Vorlage
+% mit ein paar nützlichen Abkürzungen
+%
+% Autor:
+\author{Peter~Mustermann}
+% Datum: heute  
+\date{\today}
+% Versionsnummer: 
+\newcommand{\versionsnummer}{0.1}
+% URL: 
+\newcommand{\url}{http://www.???.de}
+% Titel: 
+\title{Titel \\[2ex] \small Version: \versionsnummer \\[2ex] \texttt{ \url }}
+%
+% DIN A4 Seite: 
+\documentclass[10pt,a4paper]{article}
+%
+% viele packages: 
+% (die, die man nicht benötigt, kann weglassen)
+\usepackage{ngerman}
+\usepackage{curves}
+\usepackage{latexsym} % ein paar Symbole
+\usepackage{textcomp} % ein paar Symbole
+\usepackage[dvips]{rotating} % für rotate-Befehl
+\usepackage[latin1]{inputenc} 
+\usepackage{geometry}
+%
+% Seitengeometrie festlegen:
+\geometry{left=1.5cm,textwidth=19cm,top=0cm,textheight=26cm}
+%
+%\usepackage[draft]{graphics} % ohne Bilder (Entwurf)
+\usepackage{graphics} % Bilder einbinden
+\nonfrenchspacing
+%
+% Abkürzungen
+\newcommand{\nach}{\, \mathrm{d}} % Zeichen für z.B. "Integral ... nach x"
+\newcommand{\divergenz}{\, \mathrm{div} \,} % Divergenz
+\newcommand{\grad}{\, \mathrm{grad} \,} % Gradient
+\newcommand{\rot}{\, \mathrm{rot} \,} % Rotation
+\newcommand{\laplace}{\Delta} % Laplace-Operator
+\newcommand{\arccot}{\, \mathrm{arccot} \,}
+\newcommand{\arsinh}{\, \mathrm{arsinh} \,}
+\newcommand{\arcosh}{\, \mathrm{arcosh} \,}
+\newcommand{\artanh}{\, \mathrm{artanh} \,}
+\newcommand{\arcoth}{\, \mathrm{arcoth} \,}
+\newcommand{\sgn}{\, \mathrm{sgn} \,}  % Signumfunktion
+\newcommand{\si}{\, \mathrm{si} \,}  % si(x) = sin(x)/x
+\newcommand{\ld}{\, \mathrm{ld} \,}  % Logarithmus zur Basis 2
+\newcommand{\Si}{\, \mathrm{Si} \,}  % Integral von si(x)
+\newcommand{\f}{\, \mathrm{f} \,}  % all. Funktion
+\newcommand{\s}{\, \mathrm{s} \,}  % Sprung-Funktion
+\newcommand{\kz}{\! \times \!}  % Vektor-Kreuzprodukt
+\newcommand{\trafo}{\enspace\circ\!\!-\!\!\bullet\enspace} % Zeichen für "Transformierte von"
+\newcommand{\rtrafo}{\enspace\bullet\!\!-\!\!\circ\enspace} % Zeichen für "Rücktransformierte von"
+\newcommand{\vint}{\int\!\!\int\limits_V\!\!\int} % Volumenintegral
+\newcommand{\vstrichint}{\int\!\!\int\limits_{V'}\!\!\int} % gestrichenes Volumenintegral
+\newcommand{\aint}{\int\limits_a\!\!\int} % Flächenintegral
+\newcommand{\astrichint}{\int\limits_{a'}\!\!\int} % gestrichenes Flächenintegral
+\newcommand{\aoint}{\oint\limits_a\!\!\!\!\int} % Flächenhüllintegral  %+++ keine gute Lösung ! 
+\newcommand{\aostrichint}{\oint\limits_{a'}\!\!\!\!\int} % gestrichenes 	Flächenhüllintegral  %+++ keine gute Lösung ! 
+\newcommand{\sint}{\int\limits_s} % Wegintegral
+\newcommand{\sstrichint}{\int\limits_s} % gestrichenes Wegintegral
+\newcommand{\soint}{\oint\limits_s} % geschlossenes Wegintegral
+\newcommand{\lint}{\int\limits} % Integral mit den Grenzen ...
+\newcommand{\lsum}{\sum\limits} % Summe mit den Grenzen
+\newcommand{\llim}{\lim\limits} % Limes
+\newcommand{\olint}{\oint\limits} % Hüllintegral über ...
+\newcommand{\intinfty}{\int\limits_{-\infty}^{\infty}} % Integral von Plus bis Minus unendlich
+\newcommand{\suminfty}{\sum\limits_{n=-\infty}^{\infty}} % Summe von Plus bis Minus unendlich
+\newcommand{\gefaltet}{\ast} % Faltung zweier Funktionen
+\newcommand{\bild}[2]{\raisebox{-0.4\height}{\resizebox{!}{#2}{\includegraphics{grafiken/#1}}}} %Grafiken einbinden (z.B. .eps-Dateien)
+\newcommand{\mod}{\, \mathrm{mod} \,} % Modulo-Operator
+\newcommand{\V}{\left(\begin{array}{c}} % Vektor 
+\newcommand{\Vend}{\end{array}\right)}  % Vektorende
+% damit kann man einen Vektor einfach so schreiben : "\V 5 \\ 3 \\ 7 \Vend"
+\newcommand{\sollgleich}{\raisebox{1ex}{\(!\atop =\)}} % soll gleich ... sein
+\newcommand{\bul}{\textbullet \quad} % Aufzählungspunkt, 1. Ebene
+\newcommand{\bull}{\textopenbullet \quad} % Aufzählungspunkt, 2. Ebene
+\newcommand{\heraus}{\(\bigodot\)} % Fluss aus der Bildebene heraus
+\newcommand{\hinein}{\(\bigotimes\)} % Fluss in die Bildebene hinein
+\newcommand{\kleinhinein}{\(\otimes\)} % Fluss in die Bildebene hinein
+\newcommand{\nicht}{\overline} % logische Negation (Strich ueber dem Symbol, ist besser lesbar als \bar)
+\newcommand{\vereinigt}{\cup} % Symbol: Vereinigung aus 2 Mengen
+\newcommand{\geschnitten}{\cap} % Symbol: Schnittmenge aus 2 Mengen
+\newcommand{\complement}{^c} % Symbol für Komplementärmenge
+\newcommand{\aequivalent}{\quad \( \Leftrightarrow \) \quad} % Äquivalenz
+\newcommand{\cv}{\, \mathrm{cv} \,} % Variationskoeffizent
+\newcommand{\var}{\, \mathrm{var} \,} % Varianz
+\newcommand{\cov}{\, \mathrm{cov} \,} % Kovarianz
+\newcommand{\geom}{\, \mathrm{geom} \,} % geometrische Verteilung
+\newcommand{\und}{\enspace \mathrm{\wedge} \enspace} % log. "und"
+\newcommand{\oder}{\enspace \mathrm{\vee} \enspace} % log. "oder"
+\newcommand{\C}{\textnormal{\small I}\!\!\!\mathbf{C}} %Zeichen für Menge der Komplexen Zahlen
+\newcommand{\N}{\mathbf{I}\!\!\!\mathbf{N}} %Zeichen für Menge der natürlichen Zahlen
+\newcommand{\R}{\mathbf{I}\!\!\!\mathbf{R}} %Zeichen für Menge der reellen Zahlen
+\newcommand{\ueber}{\choose} % "über" z.B. für Binominalkoeffizenten
+%
+\begin{document}
+%
+% Titelseite:
+\maketitle
+%
+% Inhaltsverzeichnis : (wird beim 2. mal compilieren automatisch erstellt)
+\tableofcontents
+%
+\vfill
+\begin{center}
+\small{Dieses Dokument wurde mit \LaTeX{} gesetzt.}
+\end{center}
+%
+\newpage
+%
+\section{???}
+%
+\subsection{???}
+%
+
+
+
+
+
+
+%
+\end{document}

@@ -1,0 +1,44 @@
+
+\documentclass[11pt,a4paper]{scrartcl}
+\usepackage[latin1]{inputenc}  % Erlaube mehr als nur ASCII-Zeichen (z.B. Umlaute) im Text  
+\usepackage[T1]{fontenc}       % Sorgt fuer richtige Trennung auch bei Umlauten im Wort
+\usepackage{ngerman}           % bei alter Rechtschreibung hier german verwenden
+\usepackage{ae}
+%\usepackage{array}
+\usepackage{tabularx}
+\usepackage{amsmath,amssymb,fancybox}
+%\usepackage[top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+\usepackage[bottom=2.5cm]{geometry}
+\usepackage{hyperref}
+
+\parskip=1ex                    % zwischen Absaetzen eine Zeile frei lassen
+\parindent=0pt                  % Absaetze nicht einruecken
+%\pagestyle{empty}               % Keine Seitennummern oder Kopfzeilen
+
+\usepackage[pdftex]{graphicx}
+\DeclareGraphicsExtensions{.jpg}
+
+
+
+\begin{document}
+\title{Beweis für das Additionstheorem der Sinusfunktion $\mathbf{\left(\boldsymbol{\alpha, \beta} < 90^\circ\right)}$}
+\author{\href{mailto:hhorn@gmx.de}{Holger Horn}}
+\maketitle
+\thispagestyle{empty}
+
+\vspace{1cm}
+
+Wegen $\sin(180^\circ-(\alpha + \beta))=\sin(\alpha + \beta)$ gilt im mittleren Dreieck (s. Zeichnung) nach dem Sinussatz:
+$$\frac{\sin(\alpha + \beta)}{c}=\frac{\sin \delta}{1}$$
+Da ferner $\sin \delta = h$ ist, folgt: $$\sin(\alpha + \beta)=hc$$
+
+\centering \includegraphics[viewport= 231 344 365 498]{Bilder/AddTh.pdf}
+
+\vspace{0.5cm}
+Für die Trapezfläche ergibt sich nun einerseits:
+$$A=(\cos \alpha + \cos \beta)\cdot \frac{1}{2}(\sin \alpha + \sin \beta)$$
+und andererseits (als Summe dreier Dreiecksflächen):
+$$A= \frac{1}{2}\sin \alpha \cos \alpha + \frac{1}{2}\sin \beta \cos \beta + \frac{1}{2}\sin (\alpha + \beta)$$
+$$\Rightarrow \sin (\alpha + \beta) + \underline{\sin \alpha \cos \alpha} + \underline{\sin \beta \cos \beta} = \underline{\sin \alpha \cos \alpha} + \sin \beta \cos \alpha + \sin \alpha \cos \beta + \underline{\sin \beta \cos \beta}$$
+$ \Rightarrow $ \Ovalbox{$ \sin (\alpha + \beta)= \sin \alpha \cos \beta + \sin \beta \cos \alpha $}
+\end{document}

@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage{pst-plot,pstricks} % Zuerst die Pakete einbinden
+% Hier eine sinnvolle und zur Positionierung von Beschriftungen
+%äußerst nützliche Zusatzfunktion
+\newpsobject{showgrid}{psgrid}{subgriddiv=1,griddots=10,gridlabels=0pt}
+
+\begin{document}
+
+\psset{unit=1.0cm}         % Größe einer Einheit festlegen.
+                           % Darüber lässt sich die Grafik skalieren!
+  \begin{pspicture}(-1.5,-1)(4,5.5) % Größe des dargestellten Bildes von
+
+                                % x,y bis x,y
+%  \showgrid                     % Raster
+%  \psaxes{->}(0,0)(-3,0)(5,7)  % Achsen von x,y bis x,y Schnittpunkt
+                                % der Achsen bei (0,0)
+	\psline{<->}(0,5.5)(0,0)(3.5,0)
+	\psline(0,0)(-1,0)
+	\psline(3,0)(3,4)
+	\psline(0,4)(3,4)
+	\pswedge[]{5}{53.140}{98.130}
+	\psline(-0.7071,0)(-0.7071,4.95)
+	\psline(-0.7071,4.95)(0,4.95)
+	\psarc[](0,0){0.5}{0}{53.140}
+	\psarc[](0,0){0.8}{53.140}{98.140}
+	
+%  \rput(4.7,-0.4){$\mathbf{x}$}  % Beschriftung der x-Achse
+% \rput(0.3,6.5){$\mathbf{y}$}  % Beschriftung der y-Achse
+
+	\rput(0.6,0.3){$\alpha$}
+	\rput(0.3,1){$45^{\circ}$}
+	\rput(-0.7,-0.2){$x'$}
+	\rput(3,-0.25){$x$}
+	\rput(-0.2,2.5){$r$}
+	\rput(1.6,2.5){$r$}
+	\rput(-1,5){$A'$}
+	\rput(3.2,4){$A$}
+	\rput(-0.2,4){$y$}
+	\rput(0.2,4.8){$y'$}
+	%\rput(,){$$}
+
+
+\end{pspicture}
+\end{document}

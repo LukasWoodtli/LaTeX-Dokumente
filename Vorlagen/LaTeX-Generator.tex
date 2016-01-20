@@ -1,0 +1,39 @@
+%Erzeugt mit dem LaTeX-Generator: http://latex.sehnot.de
+
+%Schriftgrˆﬂe, Layout, Papierformat, Art des Dokumentes
+\documentclass[10pt,oneside,a4paper]{scrartcl}
+
+%Einstellungen der Seitenr‰nder
+\usepackage[left=2cm,right=2,5cm,top=3cm,bottom=3cm,includeheadfoot]{geometry}
+
+%neue Rechtschreibung
+\usepackage{ngerman}
+
+%Umlaute ermˆglichen
+\usepackage[latin1]{inputenc}
+
+%Kopf- und Fuﬂzeile
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+
+%Kopfzeile links bzw. innen
+\fancyhead[L]{\nouppercase{\leftmark}}
+%Kopfzeile mittig
+\fancyhead[C]{\today}
+%Kopfzeile rechts bzw. auﬂen
+\fancyhead[R]{Kopfzeile rechts bzw. auﬂen}
+%Linie oben
+\renewcommand{\headrulewidth}{0.5pt}
+
+%Fuﬂzeile links bzw. innen
+\fancyfoot[L]{\scshape\leftmark}
+%Fuﬂzeile rechts bzw. auﬂen
+\fancyfoot[R]{\thepage}
+%Linie unten
+\renewcommand{\footrulewidth}{0.5pt}
+
+\begin{document}
+Hier Text einf¸gen!
+\end{document}
+ 

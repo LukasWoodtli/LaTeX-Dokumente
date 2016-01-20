@@ -1,0 +1,21 @@
+\documentclass{article}
+\usepackage{pst-plot}
+\pagestyle{empty}
+\begin{document}
+\psset{xunit=1cm,yunit=1cm}
+\begin{pspicture}(-4.1,-4.1)(4.1,4.1)
+   \psaxes{->}(0,0)(-4,-4)(4,4)
+   \psplot[plotstyle=curve,linewidth=1.5pt]{-4}{-1}%
+     {x x mul 1 sub sqrt}
+   \psplot[plotstyle=curve,linewidth=1.5pt]{1}{4}%
+     {x x mul 1 sub sqrt}
+   \psplot[plotstyle=curve,linewidth=1.5pt]{-4}{-1}%
+     {x x mul 1 sub sqrt neg}
+   \psplot[plotstyle=curve,linewidth=1.5pt]{1}{4}%
+     {x x mul 1 sub sqrt neg}
+   \psplot[plotstyle=curve,linewidth=.5pt,plotpoints=10]{-4}{4}{x}
+   \psplot[plotstyle=curve,linewidth=.5pt]{-4}{4}{x neg}
+   \rput(3.9,-0.4){$\mathbf{x}$}
+   \rput(-0.4,3.9){$\mathbf{y}$}
+\end{pspicture}
+\end{document}

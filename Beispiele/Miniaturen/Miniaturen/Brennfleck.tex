@@ -1,0 +1,53 @@
+\documentclass[11pt,a4paper]{scrartcl}
+\usepackage[ngerman]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[pdftex]{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage{ae}
+\usepackage{amsmath, amssymb}
+\usepackage{wasysym, enumerate}
+\usepackage{hyperref}
+
+\parindent = 0.0in
+%\pagestyle{empty}
+
+
+\begin{document}
+\title{Satz von Brennfleck/Kern\footnote{Martin Brennfleck und Stefan Kern waren Schüler meines Leistungskurses Mathematik, Abitur 1985.
+Der hier aufgeführte Satz wurde während des Unterrichts von Martin Brennfleck formuliert und von Stefan Kern bewiesen. Aus Anlass des bald 20-jährigen Abitur-Jubiläums der Genannten habe ich diese Seite gestaltet und möchte damit meine Dankbarkeit für die hervorragende Kreativität und Mitwirkung bei der Unterrichtsgestaltung ausdrücken.}}
+\author{\href{mailto:hhorn@gmx.de}{Holger Horn}}
+\maketitle
+\thispagestyle{empty}
+\underline{\textbf{Satz von Brennfleck}}:
+
+Jede umkehrbare Funktion, deren Graph eine zusammenhängende Kurve ist, ist streng monoton.
+
+$\Longleftrightarrow$
+
+Wenn eine Funktion, deren Graph eine zusammenhängende Kurve ist, nicht streng monoton ist, dann ist sie nicht umkehrbar. (Negation)
+
+\vspace{1cm}
+\underline{\textbf{Beweis} der Negation} (Beweisidee von Stefan Kern):
+
+Wegen der Voraussetzung für die Funktion $f$ sind nur zwei Fälle möglich.
+
+\begin{enumerate}[{Fall} 1:]
+	\item 
+	$f$ ist mindestens stückweise konstant, d.\,h. es gibt mindestens zwei Stellen $x_1$, $x_2$ ($x_1\neq x_2$) mit $f(x_1)=f(x_2)$
+	
+	$\Longrightarrow$ Umkehrrelation $\overline{f}$ von $f$ hat mindestens eine Stelle, an der Punkte mit verschiedenen Ordinaten ($y$-Werten) liegen.
+	
+	$\Longrightarrow$ $\overline{f}$ ist keine Funktion, d.\,h. $f$ ist nicht umkehrbar.
+	
+	\item
+	Es gibt eine Stelle $x_0$, an der zwei Intervalle $I_1$, $I_2$ aneinander grenzen, über denen $f$ streng monoton ist: etwa über $I_1$ streng monoton fallend, über $I_2$ streng monoton wachsend.
+	
+	$\Longrightarrow$ In $x_0$ hat $f$ ein relatives Extremum (d.\,h. in einer gewissen Umgebung von $x_0$ sind alle Funktionswerte entweder kleiner oder größer als $f(x_0)).$
+	
+	$\Longrightarrow$ In einer Umgebung von $x_0$ gibt es Stellen $x_1$, $x_2$ mit $x_1<x_0$ und $x_2>x_0$, so dass $f(x_1)=f(x_2)$ ist.
+	
+	$\Longrightarrow$ (wie in Fall 1) $f$ ist nicht umkehrbar.
+	 
+\end{enumerate}
+
+\end{document}
