@@ -1,0 +1,24 @@
+\listfiles
+\documentclass[12pt,a4paper]{article} % Herbert Voss <voss@perce.de> 2004-06-26
+\usepackage{pst-plot}
+\usepackage{pst-all}
+\usepackage{amsmath}
+\usepackage{pst-pdf}
+
+\begin{document}
+
+\psset{yunit=4cm,xunit=4}
+\begin{pspicture}(-2,0)(2,1)
+%  \psgrid[griddots=10,gridlabels=0pt, subgriddiv=0]
+ % \psaxes[xLabel=\footnotesize,Dy=0.25]{->}(0,0)(-2,0)(2,1)
+  \uput[-90](2,0){x}\uput[0](0,1){y}
+  \rput[lb](1,0.75){$\sigma =0.5$}
+  \rput[lb](-2,0.5){$f(x)=\dfrac{1}{\sigma\sqrt{2\pi}}\,e^{-\dfrac{x^2}{2\sigma{}^2}}$}
+  \psplot[linecolor=red, linewidth=2pt]{-1.8}{1.8}{%
+    /sigma 0.5 def
+    /e 2.718282 def
+    /C 1 sigma div 6.2831 sqrt div def
+    e x dup mul 2 div sigma dup mul div neg exp C mul}
+\end{pspicture}
+
+\end{document}

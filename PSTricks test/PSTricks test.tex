@@ -1,0 +1,47 @@
+\documentclass[a4paper,12pt]{scrartcl}[18.11.05]
+
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{textcomp}
+\usepackage{pst-all}
+\usepackage{pst-circ}
+\usepackage{pst-math}
+\usepackage{pst-pdf}
+
+\title{Titel des Dokuments}
+\author{Lukas Woodtli}
+\date{\copyright \today}
+
+%
+
+\begin{document}
+\maketitle
+%\tableofcontents
+
+
+
+
+\psset{unit=10mm}
+\begin{pspicture}(-2,-1)(2,1)
+	\psgrid
+	\pnode(-1.5,0){A}
+	\pnode(1.5,0){B}
+	\resistor(A)(B){$R$}
+\end{pspicture} \hspace{0.5cm}
+\begin{pspicture}(-2,-1)(2,1)
+	\psgrid
+	\pnode(-1.5,-0.75){A}
+	\pnode(1.5,0.75){B}
+	\resistor(A)(B){$R$}
+\end{pspicture}
+
+\begin{pspicture}(-2.75,-0.5)(2.75,1)
+ \pnode(-2.75,0){A}
+ \pnode(2.75,0){B}
+ \multidipole(A)(B)%
+ \coil{$L$}%
+ \resistor{$R$}.
+ \end{pspicture}
+
+\end{document}

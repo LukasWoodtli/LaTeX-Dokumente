@@ -1,0 +1,106 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{pst-plot}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{pst-all}
+\usepackage{pst-pdf}
+
+\lstset{language=[LaTeX]TEX,basicstyle=\ttfamily\scriptsize,%
+	extendedchars=true,numbers=left,numberstyle=\tiny,%
+	xleftmargin=2em,breaklines=true,tabsize=2}
+\begin{document}
+
+The function $y=\arccos x$, the inverse of $y=\cos x$, can not be plotted in a direct way,
+because PostScript does know only the $\arctan$ function.
+
+\begin{equation}
+\arccos x=\frac{\pi}{2}-\arctan \frac{x}{\sqrt{1-x^2}}\label{eq:1}
+\end{equation}
+
+Figure \ref{plot1} shows the plot of equation \ref{eq:1}.
+\begin{lstlisting}
+\psset{xunit=2,%
+	plotpoints=500, plotstyle=dots}
+\begin{pspicture}(-1.5,-5)(1.5,3)
+	\psaxes[Dx=0.5]{->}(0,0)(-1.5,-5)(1.5,3)
+	\psplot{-1}{1}{%
+			/k 3.141 180 div def
+			x abs 0.001 lt
+				{0}
+				{x dup dup mul neg 1 add sqrt atan k mul neg 1.56 add}
+			ifelse
+		}
+	\psplot{-1}{1}{% the nagative values of the root
+			/k 3.141 180 div def
+			x abs 0.001 lt
+				{0}
+				{x dup dup mul neg 1 add sqrt neg atan k mul neg 1.56 add}
+			ifelse
+		}
+	\uput[-45](1.25,0){$x$}
+	\uput[180](0,3.25){$y$}
+	\rput[l](0.4,2){$\mathbf{f(x)=\arccos x}$}
+\end{pspicture}
+\end{lstlisting}
+
+\psset{xunit=2,%
+	plotpoints=500, plotstyle=dots}
+\begin{figure}[htp]
+\centering
+\begin{pspicture}(-1.5,-5)(1.5,3)
+	\psaxes[Dx=0.5]{->}(0,0)(-1.5,-5)(1.5,3)
+	\psplot{-1}{1}{%
+			/k 3.141 180 div def
+			x abs 0.001 lt
+				{0}
+				{x dup dup mul neg 1 add sqrt atan k mul neg 1.56 add}
+			ifelse
+		}
+	\psplot{-1}{1}{% the nagative values of the root
+			/k 3.141 180 div def
+			x abs 0.001 lt
+				{0}
+				{x dup dup mul neg 1 add sqrt neg atan k mul neg 1.56 add}
+			ifelse
+		}
+	\uput[-45](1.25,0){$x$}
+	\uput[180](0,3.25){$y$}
+	\rput[l](0.4,2){$\mathbf{f(x)=\arccos x}$}
+\end{pspicture}
+\caption{The plot of $y=\arccos x$ with \texttt{psplot}}\label{plot1}
+\end{figure}
+
+It is easier to use the \verb|\parametric| macro and the parametric function
+\begin{align}
+x&=\cos\varphi\nonumber\\
+y&=-\varphi
+\end{align}
+with $-90\le\varphi\le 270$.
+
+\begin{lstlisting}
+\begin{pspicture}(-1.5,-5)(1.5,3)
+	\psaxes[Dx=0.5]{->}(0,0)(-1.5,-5)(1.5,3)
+	\parametricplot{-90}{270}{%
+			/k 3.14159 180 div def
+			t cos t neg k mul}
+	\uput[-45](1.25,0){$x$}
+	\uput[180](0,3.25){$y$}
+	\rput[l](0.4,2){$\mathbf{f(x)=\arccos x}$}
+\end{pspicture}
+\end{lstlisting}
+\begin{figure}[htp]
+\centering
+\begin{pspicture}(-1.5,-5)(1.5,3)
+	\psaxes[Dx=0.5]{->}(0,0)(-1.5,-5)(1.5,3)
+	\parametricplot{-90}{270}{%
+			/k 3.14159 180 div def
+			t cos t neg k mul}
+	\uput[-45](1.25,0){$x$}
+	\uput[180](0,3.25){$y$}
+	\rput[l](0.4,2){$\mathbf{f(x)=\arccos x}$}
+\end{pspicture}
+\caption{The plot of $y=\arccos x$ with \texttt{parametricplot}}\label{plot2}
+\end{figure}
+
+
+\end{document}
